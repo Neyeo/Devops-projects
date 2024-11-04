@@ -16,7 +16,7 @@ jobs:
         uses: hashicorp/setup-terraform@v2  # Updated to v2
 
       - name: Display TF State Bucket Name
-        run: echo "TF_STATE_BUCKET_NAME: ${{ secrets.TF_STATE_BUCKET_NAME }}"
+        run: echo "TF_STATE_BUCKET_NAME: ${{ secrets.AWS_TF_STATE_BUCKET_NAME }}"
 
       - name: Terraform Init
         id: init
