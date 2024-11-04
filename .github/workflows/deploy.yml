@@ -1,6 +1,6 @@
 name: CI/CD with terraform
 on:
-  psuh:
+  push:
   branches:
     - Complete-CI/CD-with-Terraform-AWS
 
