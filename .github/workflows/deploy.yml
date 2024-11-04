@@ -16,6 +16,13 @@ jobs:
         uses: hashicorp/setup-terraform@v1
         with:
           terraform_wrapper: false
+      
+      - name: Check TF_STATE_BUCKET_NAME
+        run: echo "TF_STATE_BUCKET_NAME: ${{ secrets.TF_STATE_BUCKET_NAME }}"
+        shell: bash
+  env:
+    TF_STATE_BUCKET_NAME: ${{ secrets.TF_STATE_BUCKET_NAME }}
+
 
       - name: Terraform Init
         id: init
